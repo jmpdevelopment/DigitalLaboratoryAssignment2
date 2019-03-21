@@ -1,0 +1,61 @@
+#-----------------------------------------------------------
+# Vivado v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+# Start of session at: Thu Mar 14 14:06:01 2019
+# Process ID: 29366
+# Log file: /home/s1554371/Processor/vivado.log
+# Journal file: /home/s1554371/Processor/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/s1554371/Processor/Processor.xpr
+launch_simulation
+open_wave_config /home/s1554371/Processor/top_tb_behav.wcfg
+source top_tb.tcl
+restart
+run 7 s
+close_sim
+launch_simulation
+open_wave_config /home/s1554371/Processor/top_tb_behav.wcfg
+source top_tb.tcl
+restart
+run 7 s
+add_wave {{/top_tb/uut/Processor_1/BUS_DATA}} 
+add_wave {{/top_tb/uut/Processor_1/AluOut}} 
+restart
+save_wave_config {/home/s1554371/Processor/top_tb_behav.wcfg}
+run 1.1 s
+close_sim
+launch_simulation
+open_wave_config /home/s1554371/Processor/top_tb_behav.wcfg
+source top_tb.tcl
+close_sim
+launch_simulation
+open_wave_config /home/s1554371/Processor/top_tb_behav.wcfg
+source top_tb.tcl
+run 1.1 s
+close_sim
+launch_simulation
+open_wave_config /home/s1554371/Processor/top_tb_behav.wcfg
+source top_tb.tcl
+restart
+run 0.4 s
+close_sim
+launch_simulation
+open_wave_config /home/s1554371/Processor/top_tb_behav.wcfg
+source top_tb.tcl
+restart
+run 0.4 s
+close_sim
+launch_simulation
+open_wave_config /home/s1554371/Processor/top_tb_behav.wcfg
+source top_tb.tcl
+restart
+run 0.4 s
+close_sim
+launch_simulation
+open_wave_config /home/s1554371/Processor/top_tb_behav.wcfg
+source top_tb.tcl
+restart
+run 0.4 s
+close_sim

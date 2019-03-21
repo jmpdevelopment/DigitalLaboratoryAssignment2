@@ -1,0 +1,606 @@
+
+*** Running vivado
+    with args -log top.vds -m64 -mode batch -messageDb vivado.pb -notrace -source top.tcl
+
+
+****** Vivado v2015.2 (64-bit)
+  **** SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+  **** IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+    ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+
+source top.tcl -notrace
+Command: synth_design -top top -part xc7a35tcpg236-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-1223] The version limit for your license is '2015.12' and will expire in -1174 days. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for any updates or new releases.
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1054.469 ; gain = 154.520 ; free physical = 962 ; free virtual = 90959
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'top' [/home/s1554371/Processor/Processor.srcs/sources_1/new/top.v:23]
+INFO: [Synth 8-638] synthesizing module 'Processor' [/home/s1554371/Processor/Processor.srcs/sources_1/new/Processor.v:23]
+	Parameter IDLE bound to: 8'b11110000 
+	Parameter GET_THREAD_START_ADDR_0 bound to: 8'b11110001 
+	Parameter GET_THREAD_START_ADDR_1 bound to: 8'b11110010 
+	Parameter GET_THREAD_START_ADDR_2 bound to: 8'b11110011 
+	Parameter CHOOSE_OPP bound to: 8'b00000000 
+	Parameter READ_FROM_MEM_TO_A bound to: 8'b00010000 
+	Parameter READ_FROM_MEM_TO_B bound to: 8'b00010001 
+	Parameter READ_FROM_MEM_0 bound to: 8'b00010010 
+	Parameter READ_FROM_MEM_1 bound to: 8'b00010011 
+	Parameter READ_FROM_MEM_2 bound to: 8'b00010100 
+	Parameter WRITE_TO_MEM_FROM_A bound to: 8'b00100000 
+	Parameter WRITE_TO_MEM_FROM_B bound to: 8'b00100001 
+	Parameter WRITE_TO_MEM_0 bound to: 8'b00100010 
+	Parameter DO_MATHS_OPP_SAVE_IN_A bound to: 8'b00110000 
+	Parameter DO_MATHS_OPP_SAVE_IN_B bound to: 8'b00110001 
+	Parameter DO_MATHS_OPP_0 bound to: 8'b00110010 
+	Parameter IF_A_EQUALITY_B_GOTO bound to: 8'b01000000 
+	Parameter IF_A_EQUALITY_B_GOTO_0 bound to: 8'b01000001 
+	Parameter GOTO bound to: 8'b01010000 
+	Parameter GOTO_0 bound to: 8'b01010001 
+	Parameter GOTO_1 bound to: 8'b01010010 
+	Parameter FUNCTION_START bound to: 8'b01100000 
+	Parameter RETURN bound to: 8'b01100001 
+	Parameter DE_REFERENCE_A bound to: 8'b01110000 
+	Parameter DE_REFERENCE_B bound to: 8'b01110001 
+	Parameter DE_REFERENCE bound to: 8'b01110010 
+INFO: [Synth 8-638] synthesizing module 'ALU' [/home/s1554371/Processor/Processor.srcs/sources_1/new/ALU.v:23]
+INFO: [Synth 8-256] done synthesizing module 'ALU' (1#1) [/home/s1554371/Processor/Processor.srcs/sources_1/new/ALU.v:23]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/s1554371/Processor/Processor.srcs/sources_1/new/Processor.v:176]
+INFO: [Synth 8-256] done synthesizing module 'Processor' (2#1) [/home/s1554371/Processor/Processor.srcs/sources_1/new/Processor.v:23]
+INFO: [Synth 8-638] synthesizing module 'ROM' [/home/s1554371/Processor/Processor.srcs/sources_1/new/ROM.v:23]
+	Parameter RAMAddrWidth bound to: 8 - type: integer 
+INFO: [Synth 8-3876] $readmem data file '/home/s1554371/Processor/Complete_Demo_ROM.txt' is read successfully [/home/s1554371/Processor/Processor.srcs/sources_1/new/ROM.v:35]
+INFO: [Synth 8-256] done synthesizing module 'ROM' (3#1) [/home/s1554371/Processor/Processor.srcs/sources_1/new/ROM.v:23]
+INFO: [Synth 8-638] synthesizing module 'RAM' [/home/s1554371/Processor/Processor.srcs/sources_1/new/RAM.v:23]
+	Parameter RAMBaseAddr bound to: 0 - type: integer 
+	Parameter RAMAddrWidth bound to: 7 - type: integer 
+INFO: [Synth 8-3876] $readmem data file '/home/s1554371/Processor/Complete_Demo_RAM.txt' is read successfully [/home/s1554371/Processor/Processor.srcs/sources_1/new/RAM.v:43]
+INFO: [Synth 8-256] done synthesizing module 'RAM' (4#1) [/home/s1554371/Processor/Processor.srcs/sources_1/new/RAM.v:23]
+INFO: [Synth 8-638] synthesizing module 'Timer' [/home/s1554371/Processor/Processor.srcs/sources_1/new/Timer.v:23]
+	Parameter TimerBaseAddr bound to: 8'b11110000 
+	Parameter InitialIterruptRate bound to: 100 - type: integer 
+	Parameter InitialIterruptEnable bound to: 1'b1 
+INFO: [Synth 8-256] done synthesizing module 'Timer' (5#1) [/home/s1554371/Processor/Processor.srcs/sources_1/new/Timer.v:23]
+INFO: [Synth 8-638] synthesizing module 'IR_driver' [/home/s1554371/Processor/Processor.srcs/sources_1/new/IR_driver.v:23]
+INFO: [Synth 8-638] synthesizing module 'CarParameterSelector' [/home/s1554371/IR_interface_1_car/IR_interface_1_car.srcs/sources_1/new/CarParameterSelector.v:25]
+INFO: [Synth 8-638] synthesizing module 'Generic_counter' [/home/s1554371/Timing_the_world_in_decimal/Timing_the_world_in_decimal.srcs/sources_1/new/Generic_counter.v:23]
+	Parameter COUNTER_WIDTH bound to: 11 - type: integer 
+	Parameter COUNTER_MAX bound to: 1389 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Generic_counter' (6#1) [/home/s1554371/Timing_the_world_in_decimal/Timing_the_world_in_decimal.srcs/sources_1/new/Generic_counter.v:23]
+WARNING: [Synth 8-350] instance 'Counter_36kHz' of module 'Generic_counter' requires 5 connections, but only 4 given [/home/s1554371/IR_interface_1_car/IR_interface_1_car.srcs/sources_1/new/CarParameterSelector.v:62]
+INFO: [Synth 8-638] synthesizing module 'Generic_counter__parameterized0' [/home/s1554371/Timing_the_world_in_decimal/Timing_the_world_in_decimal.srcs/sources_1/new/Generic_counter.v:23]
+	Parameter COUNTER_WIDTH bound to: 11 - type: integer 
+	Parameter COUNTER_MAX bound to: 1333 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Generic_counter__parameterized0' (6#1) [/home/s1554371/Timing_the_world_in_decimal/Timing_the_world_in_decimal.srcs/sources_1/new/Generic_counter.v:23]
+WARNING: [Synth 8-350] instance 'Counter_37_5kHz' of module 'Generic_counter' requires 5 connections, but only 4 given [/home/s1554371/IR_interface_1_car/IR_interface_1_car.srcs/sources_1/new/CarParameterSelector.v:71]
+INFO: [Synth 8-638] synthesizing module 'Generic_counter__parameterized1' [/home/s1554371/Timing_the_world_in_decimal/Timing_the_world_in_decimal.srcs/sources_1/new/Generic_counter.v:23]
+	Parameter COUNTER_WIDTH bound to: 11 - type: integer 
+	Parameter COUNTER_MAX bound to: 1250 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Generic_counter__parameterized1' (6#1) [/home/s1554371/Timing_the_world_in_decimal/Timing_the_world_in_decimal.srcs/sources_1/new/Generic_counter.v:23]
+WARNING: [Synth 8-350] instance 'Counter_40kHz' of module 'Generic_counter' requires 5 connections, but only 4 given [/home/s1554371/IR_interface_1_car/IR_interface_1_car.srcs/sources_1/new/CarParameterSelector.v:81]
+INFO: [Synth 8-256] done synthesizing module 'CarParameterSelector' (7#1) [/home/s1554371/IR_interface_1_car/IR_interface_1_car.srcs/sources_1/new/CarParameterSelector.v:25]
+INFO: [Synth 8-638] synthesizing module 'IRTransmitterSM' [/home/s1554371/IR_interface_1_car/IR_interface_1_car.srcs/sources_1/new/IRTransmitterSM.v:24]
+INFO: [Synth 8-638] synthesizing module 'Generic_counter__parameterized2' [/home/s1554371/Timing_the_world_in_decimal/Timing_the_world_in_decimal.srcs/sources_1/new/Generic_counter.v:23]
+	Parameter COUNTER_WIDTH bound to: 24 - type: integer 
+	Parameter COUNTER_MAX bound to: 10000000 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'Generic_counter__parameterized2' (7#1) [/home/s1554371/Timing_the_world_in_decimal/Timing_the_world_in_decimal.srcs/sources_1/new/Generic_counter.v:23]
+WARNING: [Synth 8-350] instance 'Counter_10Hz' of module 'Generic_counter' requires 5 connections, but only 4 given [/home/s1554371/IR_interface_1_car/IR_interface_1_car.srcs/sources_1/new/IRTransmitterSM.v:41]
+INFO: [Synth 8-256] done synthesizing module 'IRTransmitterSM' (8#1) [/home/s1554371/IR_interface_1_car/IR_interface_1_car.srcs/sources_1/new/IRTransmitterSM.v:24]
+INFO: [Synth 8-638] synthesizing module 'SevenSegmentDisplay' [/home/s1554371/IR_interface_1_car/IR_interface_1_car.srcs/sources_1/new/SevenSegmentDisplay.v:24]
+INFO: [Synth 8-256] done synthesizing module 'SevenSegmentDisplay' (9#1) [/home/s1554371/IR_interface_1_car/IR_interface_1_car.srcs/sources_1/new/SevenSegmentDisplay.v:24]
+WARNING: [Synth 8-567] referenced signal 'BUS_DATA' should be on the sensitivity list [/home/s1554371/Processor/Processor.srcs/sources_1/new/IR_driver.v:48]
+INFO: [Synth 8-256] done synthesizing module 'IR_driver' (10#1) [/home/s1554371/Processor/Processor.srcs/sources_1/new/IR_driver.v:23]
+INFO: [Synth 8-256] done synthesizing module 'top' (11#1) [/home/s1554371/Processor/Processor.srcs/sources_1/new/top.v:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1090.766 ; gain = 190.816 ; free physical = 925 ; free virtual = 90922
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin Processor_1:BUS_INTERRUPTS_RAISE[0] to constant 0 [/home/s1554371/Processor/Processor.srcs/sources_1/new/top.v:43]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1090.766 ; gain = 190.816 ; free physical = 926 ; free virtual = 90923
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/s1554371/Processor/Processor.srcs/constrs_1/new/proc_constraints.xdc]
+Finished Parsing XDC File [/home/s1554371/Processor/Processor.srcs/constrs_1/new/proc_constraints.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1415.789 ; gain = 0.000 ; free physical = 763 ; free virtual = 90760
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1415.789 ; gain = 515.840 ; free physical = 762 ; free virtual = 90759
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tcpg236-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1415.789 ; gain = 515.840 ; free physical = 762 ; free virtual = 90759
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1415.789 ; gain = 515.840 ; free physical = 762 ; free virtual = 90759
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3537] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the inputs of the operator [/home/s1554371/Processor/Processor.srcs/sources_1/new/ALU.v:39]
+INFO: [Synth 8-802] inferred FSM for state register 'CurrState_reg' in module 'Processor'
+INFO: [Synth 8-5546] ROM "NextState" won't be mapped to RAM because it is too sparse
+ROM size is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5546] ROM "NextProgCounterOffset" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "NextBusDataOut" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "NextRegSelect" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "NextProgContext" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5544] ROM "NextState" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "NextState" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "NextState" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "ROM" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "DownCounter" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "Timer" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5546] ROM "TransmitTimerValue" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "COMMAND" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                     Old Encoding 
+---------------------------------------------------------------------------------------------------
+              CHOOSE_OPP |                            00000 |                         00000000
+      READ_FROM_MEM_TO_A |                            00001 |                         00010000
+      READ_FROM_MEM_TO_B |                            00010 |                         00010001
+         READ_FROM_MEM_0 |                            00011 |                         00010010
+         READ_FROM_MEM_1 |                            00100 |                         00010011
+     WRITE_TO_MEM_FROM_A |                            00101 |                         00100000
+     WRITE_TO_MEM_FROM_B |                            00110 |                         00100001
+          WRITE_TO_MEM_0 |                            00111 |                         00100010
+  DO_MATHS_OPP_SAVE_IN_A |                            01000 |                         00110000
+  DO_MATHS_OPP_SAVE_IN_B |                            01001 |                         00110001
+          DO_MATHS_OPP_0 |                            01010 |                         00110010
+    IF_A_EQUALITY_B_GOTO |                            01011 |                         01000000
+  IF_A_EQUALITY_B_GOTO_0 |                            01100 |                         01000001
+                    IDLE |                            01101 |                         11110000
+ GET_THREAD_START_ADDR_0 |                            01110 |                         11110001
+ GET_THREAD_START_ADDR_1 |                            01111 |                         11110010
+ GET_THREAD_START_ADDR_2 |                            10000 |                         11110011
+          FUNCTION_START |                            10001 |                         01100000
+                    GOTO |                            10010 |                         01010000
+                  GOTO_0 |                            10011 |                         01010001
+                  GOTO_1 |                            10100 |                         01010010
+                  RETURN |                            10101 |                         01100001
+          DE_REFERENCE_A |                            10110 |                         01110000
+          DE_REFERENCE_B |                            10111 |                         01110001
+            DE_REFERENCE |                            11000 |                         01110010
+         READ_FROM_MEM_2 |                            11001 |                         00010100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'CurrState_reg' using encoding 'sequential' in module 'Processor'
+INFO: [Synth 8-5562] The signal Mem_reg is implemented as block RAM but is better mapped onto distributed LUT RAM for the following reason(s): The *depth (7 address bits)* is shallow. Please use attribute (* ram_style = "distributed" *) to instruct Vivado to infer distributed LUT RAM.
+WARNING: [Synth 8-327] inferring latch for variable 'COMMAND_reg' [/home/s1554371/Processor/Processor.srcs/sources_1/new/IR_driver.v:50]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1415.789 ; gain = 515.840 ; free physical = 749 ; free virtual = 90746
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 2     
+	   2 Input     24 Bit       Adders := 1     
+	   4 Input     12 Bit       Adders := 1     
+	   2 Input     11 Bit       Adders := 3     
+	   4 Input     10 Bit       Adders := 3     
+	   2 Input      9 Bit       Adders := 1     
+	   3 Input      8 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 3     
++---Registers : 
+	               32 Bit    Registers := 2     
+	               24 Bit    Registers := 1     
+	               11 Bit    Registers := 3     
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 11    
+	                7 Bit    Registers := 1     
+	                6 Bit    Registers := 3     
+	                5 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 2     
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 18    
++---RAMs : 
+	             1024 Bit         RAMs := 1     
++---Muxes : 
+	   2 Input      9 Bit        Muxes := 12    
+	  13 Input      8 Bit        Muxes := 3     
+	   8 Input      8 Bit        Muxes := 1     
+	   3 Input      8 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 2     
+	  26 Input      8 Bit        Muxes := 4     
+	 257 Input      8 Bit        Muxes := 1     
+	   4 Input      8 Bit        Muxes := 1     
+	   4 Input      7 Bit        Muxes := 1     
+	   4 Input      6 Bit        Muxes := 3     
+	  42 Input      5 Bit        Muxes := 1     
+	   4 Input      5 Bit        Muxes := 1     
+	  13 Input      3 Bit        Muxes := 1     
+	   7 Input      3 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 1     
+	  26 Input      2 Bit        Muxes := 1     
+	  26 Input      1 Bit        Muxes := 9     
+	   2 Input      1 Bit        Muxes := 15    
+	   4 Input      1 Bit        Muxes := 2     
+	   7 Input      1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module ALU 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input      8 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 1     
++---Muxes : 
+	  13 Input      8 Bit        Muxes := 3     
+	   8 Input      8 Bit        Muxes := 1     
+	  13 Input      3 Bit        Muxes := 1     
+Module Processor 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 3     
++---Registers : 
+	                8 Bit    Registers := 6     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   3 Input      8 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 2     
+	  26 Input      8 Bit        Muxes := 4     
+	  42 Input      5 Bit        Muxes := 1     
+	   3 Input      2 Bit        Muxes := 1     
+	  26 Input      2 Bit        Muxes := 1     
+	  26 Input      1 Bit        Muxes := 9     
+Module ROM 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
++---Muxes : 
+	 257 Input      8 Bit        Muxes := 1     
+Module RAM 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---RAMs : 
+	             1024 Bit         RAMs := 1     
+Module Timer 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 2     
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 4     
+Module Generic_counter 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     11 Bit       Adders := 1     
++---Registers : 
+	               11 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module Generic_counter__parameterized0 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     11 Bit       Adders := 1     
++---Registers : 
+	               11 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module Generic_counter__parameterized1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     11 Bit       Adders := 1     
++---Registers : 
+	               11 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module CarParameterSelector 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
+	                6 Bit    Registers := 3     
+	                5 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   4 Input      8 Bit        Muxes := 1     
+	   4 Input      6 Bit        Muxes := 3     
+	   4 Input      5 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 2     
+Module Generic_counter__parameterized2 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     24 Bit       Adders := 1     
++---Registers : 
+	               24 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
+Module IRTransmitterSM 
+Detailed RTL Component Info : 
++---Adders : 
+	   4 Input     12 Bit       Adders := 1     
+	   4 Input     10 Bit       Adders := 3     
+	   2 Input      9 Bit       Adders := 1     
++---Registers : 
+	                9 Bit    Registers := 1     
+	                3 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      9 Bit        Muxes := 12    
+	   7 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 11    
+	   7 Input      1 Bit        Muxes := 3     
+Module SevenSegmentDisplay 
+Detailed RTL Component Info : 
++---Registers : 
+	                7 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   4 Input      7 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 120 (col length:60)
+BRAMs: 150 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1415.789 ; gain = 515.840 ; free physical = 749 ; free virtual = 90746
+---------------------------------------------------------------------------------
+Start Cross Boundary Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5545] ROM "DownCounter" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5545] ROM "Timer" won't be mapped to RAM because address size (32) is larger than maximum supported(18)
+INFO: [Synth 8-5546] ROM "TransmitTimerValue" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "COMMAND" won't be mapped to RAM because it is too sparse
+---------------------------------------------------------------------------------
+Finished Cross Boundary Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1415.789 ; gain = 515.840 ; free physical = 749 ; free virtual = 90746
+---------------------------------------------------------------------------------
+Finished Parallel Reinference  : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1415.789 ; gain = 515.840 ; free physical = 749 ; free virtual = 90746
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+INFO: [Synth 8-5562] The signal RAM_1/Mem_reg is implemented as block RAM but is better mapped onto distributed LUT RAM for the following reason(s): The *depth (7 address bits)* is shallow. Please use attribute (* ram_style = "distributed" *) to instruct Vivado to infer distributed LUT RAM.
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Block RAM:
++------------+---------------+------------------------+---+---+------------------------+---+---+---------+--------+--------+-------------------+
+|Module Name | RTL Object    | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | OUT_REG | RAMB18 | RAMB36 | Hierarchical Name | 
++------------+---------------+------------------------+---+---+------------------------+---+---+---------+--------+--------+-------------------+
+|top         | RAM_1/Mem_reg | 128 x 8(READ_FIRST)    | W | R |                        |   |   | Port A  | 1      | 0      | top/extram__2     | 
++------------+---------------+------------------------+---+---+------------------------+---+---+---------+--------+--------+-------------------+
+
+Note: The table shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. "Hierarchical Name" reflects the Block RAM name as it appears in the hierarchical module and only part of it is displayed.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\Processor_1/CurrProgCounterOffset_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\IR_driver_1/SevenSegmentDisplay/ACTIVE_ANODE_reg[0] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\IR_driver_1/SevenSegmentDisplay/ACTIVE_ANODE_reg[3] )
+WARNING: [Synth 8-3332] Sequential element (\Processor_1/CurrProgCounterOffset_reg[1] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\Processor_1/CurrInterruptAck_reg[0] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\ROM_1/DATA_reg[4] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\IR_driver_1/CarSelector/START_BURST_SIZE_reg[3] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\IR_driver_1/CarSelector/START_BURST_SIZE_reg[2] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\IR_driver_1/CarSelector/START_BURST_SIZE_reg[1] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\IR_driver_1/CarSelector/START_BURST_SIZE_reg[0] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\IR_driver_1/CarSelector/DE_ASSERT_BURST_SIZE_reg[1] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\IR_driver_1/CarSelector/ASSERT_BURST_SIZE_reg[2] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\IR_driver_1/CarSelector/ASSERT_BURST_SIZE_reg[0] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\IR_driver_1/SevenSegmentDisplay/SEGMENT_DISPLAY_OUT_reg[3] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\IR_driver_1/SevenSegmentDisplay/SEGMENT_DISPLAY_OUT_reg[1] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\IR_driver_1/SevenSegmentDisplay/ACTIVE_ANODE_reg[3] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\IR_driver_1/CarSelector/DE_ASSERT_BURST_SIZE_reg[4] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\IR_driver_1/CarSelector/GAP_SIZE_reg[3] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\IR_driver_1/CarSelector/ASSERT_BURST_SIZE_reg[5] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\IR_driver_1/SevenSegmentDisplay/ACTIVE_ANODE_reg[1] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\IR_driver_1/SevenSegmentDisplay/ACTIVE_ANODE_reg[2] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\IR_driver_1/SevenSegmentDisplay/ACTIVE_ANODE_reg[0] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\ROM_1/DATA_reg[6] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\IR_driver_1/CarSelector/DE_ASSERT_BURST_SIZE_reg[0] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\IR_driver_1/CarSelector/GAP_SIZE_reg[1] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\IR_driver_1/CarSelector/GAP_SIZE_reg[2] ) is unused and will be removed from module top.
+---------------------------------------------------------------------------------
+Start Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3332] Sequential element (\IR_driver_1/CarSelector/START_BURST_SIZE_reg[5] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\IR_driver_1/CarSelector/CAR_SELECT_BURST_SIZE_reg[0] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\IR_driver_1/CarSelector/START_BURST_SIZE_reg[4] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\IR_driver_1/CarSelector/CAR_SELECT_BURST_SIZE_reg[2] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\IR_driver_1/CarSelector/ASSERT_BURST_SIZE_reg[3] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\IR_driver_1/CarSelector/GAP_SIZE_reg[0] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\IR_driver_1/CarSelector/START_BURST_SIZE_reg[7] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\IR_driver_1/CarSelector/DE_ASSERT_BURST_SIZE_reg[3] ) is unused and will be removed from module top.
+---------------------------------------------------------------------------------
+Finished Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1415.789 ; gain = 515.840 ; free physical = 733 ; free virtual = 90730
+---------------------------------------------------------------------------------
+Finished Parallel Area Optimization  : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1415.789 ; gain = 515.840 ; free physical = 733 ; free virtual = 90730
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1415.789 ; gain = 515.840 ; free physical = 733 ; free virtual = 90730
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1415.789 ; gain = 515.840 ; free physical = 675 ; free virtual = 90672
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1415.789 ; gain = 515.840 ; free physical = 675 ; free virtual = 90672
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3332] Sequential element (\IR_driver_1/CarSelector/ASSERT_BURST_SIZE_reg[4] ) is unused and will be removed from module top.
+WARNING: [Synth 8-3332] Sequential element (\IR_driver_1/CarSelector/CAR_SELECT_BURST_SIZE_reg[3] ) is unused and will be removed from module top.
+INFO: [Synth 8-4480] The timing for the instance \RAM_1/Mem_reg  (implemented as a block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1415.789 ; gain = 515.840 ; free physical = 653 ; free virtual = 90650
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1415.789 ; gain = 515.840 ; free physical = 653 ; free virtual = 90650
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1415.789 ; gain = 515.840 ; free physical = 653 ; free virtual = 90650
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1415.789 ; gain = 515.840 ; free physical = 653 ; free virtual = 90650
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1415.789 ; gain = 515.840 ; free physical = 653 ; free virtual = 90650
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1415.789 ; gain = 515.840 ; free physical = 653 ; free virtual = 90650
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |BUFG     |     1|
+|2     |CARRY4   |    66|
+|3     |LUT1     |   132|
+|4     |LUT2     |    62|
+|5     |LUT3     |    81|
+|6     |LUT4     |   102|
+|7     |LUT5     |   100|
+|8     |LUT6     |   154|
+|9     |MUXF7    |     5|
+|10    |RAMB18E1 |     1|
+|11    |FDPE     |     1|
+|12    |FDRE     |   265|
+|13    |FDSE     |    12|
+|14    |LD       |     4|
+|15    |IBUF     |     4|
+|16    |OBUF     |    14|
++------+---------+------+
+
+Report Instance Areas: 
++------+------------------------+--------------------------------+------+
+|      |Instance                |Module                          |Cells |
++------+------------------------+--------------------------------+------+
+|1     |top                     |                                |  1004|
+|2     |  IR_driver_1           |IR_driver                       |   398|
+|3     |    CarSelector         |CarParameterSelector            |   164|
+|4     |      Counter_36kHz     |Generic_counter                 |    33|
+|5     |      Counter_37_5kHz   |Generic_counter__parameterized0 |    33|
+|6     |      Counter_40kHz     |Generic_counter__parameterized1 |    31|
+|7     |    IRTransmitterSM     |IRTransmitterSM                 |   225|
+|8     |      Counter_10Hz      |Generic_counter__parameterized2 |    65|
+|9     |    SevenSegmentDisplay |SevenSegmentDisplay             |     5|
+|10    |  Processor_1           |Processor                       |   253|
+|11    |    ALU0                |ALU                             |    56|
+|12    |  RAM_1                 |RAM                             |     2|
+|13    |  ROM_1                 |ROM                             |    21|
+|14    |  Timer_1               |Timer                           |   307|
++------+------------------------+--------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1415.789 ; gain = 515.840 ; free physical = 653 ; free virtual = 90650
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 34 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1415.789 ; gain = 74.297 ; free physical = 652 ; free virtual = 90649
+Synthesis Optimization Complete : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1415.789 ; gain = 515.840 ; free physical = 652 ; free virtual = 90649
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 75 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 4 instances were transformed.
+  LD => LDCE: 4 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+69 Infos, 40 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1429.805 ; gain = 421.336 ; free physical = 650 ; free virtual = 90647
+report_utilization: Time (s): cpu = 00:00:00.66 ; elapsed = 00:00:00.70 . Memory (MB): peak = 1461.828 ; gain = 0.000 ; free physical = 650 ; free virtual = 90647
+INFO: [Common 17-206] Exiting Vivado at Tue Mar 19 09:34:56 2019...

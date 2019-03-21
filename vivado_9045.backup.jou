@@ -1,0 +1,332 @@
+#-----------------------------------------------------------
+# Vivado v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+# Start of session at: Tue Mar 12 10:18:51 2019
+# Process ID: 3014
+# Log file: /home/s1554371/Processor/vivado.log
+# Journal file: /home/s1554371/Processor/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/s1554371/Processor/Processor.xpr
+reset_run impl_1
+launch_runs impl_1
+wait_on_run impl_1
+set_property is_enabled true [get_files  /home/s1554371/Processor/Processor.srcs/sim_1/new/top_tb.v]
+launch_simulation
+source top_tb.tcl
+restart
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+launch_simulation
+source top_tb.tcl
+add_wave {{/top_tb/uut/Processor_1/CurrState}} 
+save_wave_config {/home/s1554371/Processor/top_tb_behav.wcfg}
+add_files -fileset sim_1 -norecurse /home/s1554371/Processor/top_tb_behav.wcfg
+set_property xsim.view /home/s1554371/Processor/top_tb_behav.wcfg [get_filesets sim_1]
+launch_simulation
+open_wave_config /home/s1554371/Processor/top_tb_behav.wcfg
+source top_tb.tcl
+reset_run impl_1
+launch_runs impl_1
+wait_on_run impl_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+open_run synth_1 -name synth_1
+reset_run synth_1
+launch_runs impl_1
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream
+wait_on_run impl_1
+open_hw
+connect_hw_server -url localhost:3121
+current_hw_target [get_hw_targets */xilinx_tcf/Digilent/210183714051A]
+set_property PARAM.FREQUENCY 15000000 [get_hw_targets */xilinx_tcf/Digilent/210183714051A]
+open_hw_target
+set_property PROGRAM.FILE {/home/s1554371/Processor/Processor.runs/impl_1/top.bit} [lindex [get_hw_devices] 0]
+current_hw_device [lindex [get_hw_devices] 0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices] 0]
+set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {/home/s1554371/Processor/Processor.runs/impl_1/top.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+refresh_hw_device [lindex [get_hw_devices] 0]
+reset_run synth_1
+launch_runs impl_1
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream
+wait_on_run impl_1
+set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {/home/s1554371/Processor/Processor.runs/impl_1/top.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+refresh_hw_device [lindex [get_hw_devices] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+wait_on_run impl_1
+reset_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream
+wait_on_run impl_1
+set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {/home/s1554371/Processor/Processor.runs/impl_1/top.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+refresh_hw_device [lindex [get_hw_devices] 0]
+close_sim
+launch_simulation
+open_wave_config /home/s1554371/Processor/top_tb_behav.wcfg
+source top_tb.tcl
+run 100 ns
+run 100 ns
+add_wave {{/top_tb/uut/Processor_1/CurrRegA}} 
+add_wave {{/top_tb/uut/Processor_1/CurrRegB}} 
+save_wave_config {/home/s1554371/Processor/top_tb_behav.wcfg}
+close_sim
+launch_simulation
+open_wave_config /home/s1554371/Processor/top_tb_behav.wcfg
+source top_tb.tcl
+close_sim
+launch_simulation
+open_wave_config /home/s1554371/Processor/top_tb_behav.wcfg
+source top_tb.tcl
+close_sim
+launch_simulation
+open_wave_config /home/s1554371/Processor/top_tb_behav.wcfg
+source top_tb.tcl
+close_sim
+launch_simulation
+open_wave_config /home/s1554371/Processor/top_tb_behav.wcfg
+source top_tb.tcl
+run 100 ns
+run 100 ns
+run 100 ns
+close_sim
+launch_simulation
+open_wave_config /home/s1554371/Processor/top_tb_behav.wcfg
+source top_tb.tcl
+close_sim
+launch_simulation
+open_wave_config /home/s1554371/Processor/top_tb_behav.wcfg
+source top_tb.tcl
+close_sim
+launch_simulation
+open_wave_config /home/s1554371/Processor/top_tb_behav.wcfg
+source top_tb.tcl
+close_sim
+launch_simulation
+open_wave_config /home/s1554371/Processor/top_tb_behav.wcfg
+source top_tb.tcl
+close_sim
+launch_simulation
+open_wave_config /home/s1554371/Processor/top_tb_behav.wcfg
+source top_tb.tcl
+close_sim
+launch_simulation
+open_wave_config /home/s1554371/Processor/top_tb_behav.wcfg
+source top_tb.tcl
+close_sim
+launch_simulation
+open_wave_config /home/s1554371/Processor/top_tb_behav.wcfg
+source top_tb.tcl
+close_sim
+launch_simulation
+open_wave_config /home/s1554371/Processor/top_tb_behav.wcfg
+source top_tb.tcl
+close_sim
+launch_simulation
+open_wave_config /home/s1554371/Processor/top_tb_behav.wcfg
+source top_tb.tcl
+close_sim
+launch_simulation
+open_wave_config /home/s1554371/Processor/top_tb_behav.wcfg
+source top_tb.tcl
+close_sim
+launch_simulation
+open_wave_config /home/s1554371/Processor/top_tb_behav.wcfg
+source top_tb.tcl
+close_sim
+launch_simulation
+open_wave_config /home/s1554371/Processor/top_tb_behav.wcfg
+source top_tb.tcl
+close_sim
+launch_simulation
+open_wave_config /home/s1554371/Processor/top_tb_behav.wcfg
+source top_tb.tcl
+close_sim
+launch_simulation
+open_wave_config /home/s1554371/Processor/top_tb_behav.wcfg
+source top_tb.tcl
+close_sim
+launch_simulation
+open_wave_config /home/s1554371/Processor/top_tb_behav.wcfg
+source top_tb.tcl
+close_sim
+launch_simulation
+open_wave_config /home/s1554371/Processor/top_tb_behav.wcfg
+source top_tb.tcl
+close_sim
+launch_simulation
+open_wave_config /home/s1554371/Processor/top_tb_behav.wcfg
+source top_tb.tcl
+close_sim
+launch_simulation
+open_wave_config /home/s1554371/Processor/top_tb_behav.wcfg
+source top_tb.tcl
+close_sim
+launch_simulation
+open_wave_config /home/s1554371/Processor/top_tb_behav.wcfg
+source top_tb.tcl
+close_sim
+launch_simulation
+open_wave_config /home/s1554371/Processor/top_tb_behav.wcfg
+source top_tb.tcl
+close_sim
+launch_simulation
+open_wave_config /home/s1554371/Processor/top_tb_behav.wcfg
+source top_tb.tcl
+close_sim
+launch_simulation
+open_wave_config /home/s1554371/Processor/top_tb_behav.wcfg
+source top_tb.tcl
+close_sim
+launch_simulation
+open_wave_config /home/s1554371/Processor/top_tb_behav.wcfg
+source top_tb.tcl
+add_wave {{/top_tb/uut/Processor_1/BusDataIn}} 
+add_wave {{/top_tb/uut/Processor_1/CurrBusDataOut}} 
+add_wave {{/top_tb/uut/Processor_1/NextBusDataOut}} 
+save_wave_config {/home/s1554371/Processor/top_tb_behav.wcfg}
+restart
+run 100 ns
+run 100 ns
+run 100 ns
+close_sim
+launch_simulation
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+launch_simulation
+open_wave_config /home/s1554371/Processor/top_tb_behav.wcfg
+source top_tb.tcl
+close_sim
+launch_simulation
+open_wave_config /home/s1554371/Processor/top_tb_behav.wcfg
+source top_tb.tcl
+close [ open /home/s1554371/Processor/Processor.srcs/sources_1/new/IR_driver.v w ]
+add_files /home/s1554371/Processor/Processor.srcs/sources_1/new/IR_driver.v
+close_sim
+launch_simulation
+open_wave_config /home/s1554371/Processor/top_tb_behav.wcfg
+source top_tb.tcl
+add_wave {{/top_tb/uut/Processor_1/BUS_INTERRUPTS_RAISE}} 
+restart
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 100 ns
+run 2 s
+close_sim
+launch_simulation
+open_wave_config /home/s1554371/Processor/top_tb_behav.wcfg
+source top_tb.tcl
+add_wave {{/top_tb/uut/Timer_1/BUS_INTERRUPT_RAISE}} 
+add_wave {{/top_tb/uut/Bus_Interrupts_Rise}} 
+restart
+run 2 s
+close_sim
+launch_simulation
+open_wave_config /home/s1554371/Processor/top_tb_behav.wcfg
+source top_tb.tcl
+add_wave {{/top_tb/uut/Timer_1/BUS_INTERRUPT_RAISE}} 
+add_wave {{/top_tb/uut/Timer_1/BUS_INTERRUPT_ACK}} 
+add_wave {{/top_tb/uut/Bus_Interrupts_Rise}} 
+save_wave_config {/home/s1554371/Processor/top_tb_behav.wcfg}
+run 2 s
+add_wave {{/top_tb/uut/Processor_1/ProgMemoryOut}} 
+save_wave_config {/home/s1554371/Processor/top_tb_behav.wcfg}
+restart
+run 2 s
+close_sim
+launch_simulation
+add_files -norecurse {/home/s1554371/IR_interface_1_car/IR_interface_1_car.srcs/sources_1/new/IRTransmitterSM.v /home/s1554371/IR_interface_1_car/IR_interface_1_car.srcs/sources_1/new/CarParameterSelector.v}
+launch_simulation
+set_property is_enabled true [get_files  /home/s1554371/Timing_the_world_in_decimal/Timing_the_world_in_decimal.srcs/sources_1/new/Generic_counter.v]
+launch_simulation
+open_wave_config /home/s1554371/Processor/top_tb_behav.wcfg
+source top_tb.tcl
+run 1 s
+close_sim
+launch_simulation
+open_wave_config /home/s1554371/Processor/top_tb_behav.wcfg
+source top_tb.tcl
+run 1 s
+restart
+run 2 s
+close_sim
+launch_simulation
+open_wave_config /home/s1554371/Processor/top_tb_behav.wcfg
+source top_tb.tcl
+run 100 us
+run 100 us
+run 100 us
+run 10 ms
+run 10 ms
+run 10 ms
+run 10 ms
+run 10 ms
+run 10 ms
+run 10 ms
+run 10 ms
+run 10 ms
+run 10 ms
+run 10 ms
+run 10 ms
+close_sim
+launch_simulation
+open_wave_config /home/s1554371/Processor/top_tb_behav.wcfg
+source top_tb.tcl
+run 10 ms
+run 10 ms
+run 100 ms
+close_sim
+launch_simulation
+open_wave_config /home/s1554371/Processor/top_tb_behav.wcfg
+source top_tb.tcl
+close_sim
+launch_simulation
+open_wave_config /home/s1554371/Processor/top_tb_behav.wcfg
+source top_tb.tcl
+run 100 ms
+close_sim
+launch_simulation
+open_wave_config /home/s1554371/Processor/top_tb_behav.wcfg
+source top_tb.tcl
+restart
+run 1 ms
+restart
+run 1 s
+close_sim
+launch_simulation
+open_wave_config /home/s1554371/Processor/top_tb_behav.wcfg
+source top_tb.tcl
+run 1 s
+close_sim
+launch_simulation
+open_wave_config /home/s1554371/Processor/top_tb_behav.wcfg
+source top_tb.tcl
+run 1 s
+add_wave {{/top_tb/uut/Processor_1/CurrBusAddr}} 
+restart
+save_wave_config {/home/s1554371/Processor/top_tb_behav.wcfg}
+run 1 s

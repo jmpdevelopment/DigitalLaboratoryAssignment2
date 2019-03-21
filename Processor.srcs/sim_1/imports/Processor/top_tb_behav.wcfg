@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="top_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="top_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="23" />
+   <wvobject db_ref_id="1" type="logic" fp_name="/top_tb/CLK">
+      <obj_property name="ElementShortName">CLK</obj_property>
+      <obj_property name="ObjectShortName">CLK</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/top_tb/RESET">
+      <obj_property name="ElementShortName">RESET</obj_property>
+      <obj_property name="ObjectShortName">RESET</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/top_tb/uut/Processor_1/CurrState">
+      <obj_property name="ElementShortName">CurrState[7:0]</obj_property>
+      <obj_property name="ObjectShortName">CurrState[7:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/top_tb/uut/Processor_1/CurrRegA">
+      <obj_property name="ElementShortName">CurrRegA[7:0]</obj_property>
+      <obj_property name="ObjectShortName">CurrRegA[7:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/top_tb/uut/Processor_1/CurrRegB">
+      <obj_property name="ElementShortName">CurrRegB[7:0]</obj_property>
+      <obj_property name="ObjectShortName">CurrRegB[7:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/top_tb/uut/Processor_1/BusDataIn">
+      <obj_property name="ElementShortName">BusDataIn[7:0]</obj_property>
+      <obj_property name="ObjectShortName">BusDataIn[7:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/top_tb/uut/Processor_1/CurrBusDataOut">
+      <obj_property name="ElementShortName">CurrBusDataOut[7:0]</obj_property>
+      <obj_property name="ObjectShortName">CurrBusDataOut[7:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/top_tb/uut/Processor_1/NextBusDataOut">
+      <obj_property name="ElementShortName">NextBusDataOut[7:0]</obj_property>
+      <obj_property name="ObjectShortName">NextBusDataOut[7:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/top_tb/uut/Timer_1/BUS_INTERRUPT_RAISE">
+      <obj_property name="ElementShortName">BUS_INTERRUPT_RAISE</obj_property>
+      <obj_property name="ObjectShortName">BUS_INTERRUPT_RAISE</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/top_tb/uut/Timer_1/BUS_INTERRUPT_ACK">
+      <obj_property name="ElementShortName">BUS_INTERRUPT_ACK</obj_property>
+      <obj_property name="ObjectShortName">BUS_INTERRUPT_ACK</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/top_tb/uut/Bus_Interrupts_Rise">
+      <obj_property name="ElementShortName">Bus_Interrupts_Rise[1:0]</obj_property>
+      <obj_property name="ObjectShortName">Bus_Interrupts_Rise[1:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/top_tb/uut/Processor_1/ProgMemoryOut">
+      <obj_property name="ElementShortName">ProgMemoryOut[7:0]</obj_property>
+      <obj_property name="ObjectShortName">ProgMemoryOut[7:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/top_tb/uut/Processor_1/CurrBusAddr">
+      <obj_property name="ElementShortName">CurrBusAddr[7:0]</obj_property>
+      <obj_property name="ObjectShortName">CurrBusAddr[7:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/top_tb/uut/IR_driver_1/COMMAND">
+      <obj_property name="ElementShortName">COMMAND[3:0]</obj_property>
+      <obj_property name="ObjectShortName">COMMAND[3:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/top_tb/uut/IR_driver_1/GENERATED_PACKET">
+      <obj_property name="ElementShortName">GENERATED_PACKET</obj_property>
+      <obj_property name="ObjectShortName">GENERATED_PACKET</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/top_tb/uut/IR_driver_1/IRTransmitterSM/CURR_STATE">
+      <obj_property name="ElementShortName">CURR_STATE[2:0]</obj_property>
+      <obj_property name="ObjectShortName">CURR_STATE[2:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/top_tb/uut/IR_driver_1/IRTransmitterSM/PACKET_OUT">
+      <obj_property name="ElementShortName">PACKET_OUT</obj_property>
+      <obj_property name="ObjectShortName">PACKET_OUT</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/top_tb/uut/IR_driver_1/IRTransmitterSM/ENABLE">
+      <obj_property name="ElementShortName">ENABLE</obj_property>
+      <obj_property name="ObjectShortName">ENABLE</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/top_tb/uut/IR_driver_1/IRTransmitterSM/IRLed">
+      <obj_property name="ElementShortName">IRLed</obj_property>
+      <obj_property name="ObjectShortName">IRLed</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/top_tb/uut/IR_driver_1/IRTransmitterSM/TRIGGER_10Hz">
+      <obj_property name="ElementShortName">TRIGGER_10Hz</obj_property>
+      <obj_property name="ObjectShortName">TRIGGER_10Hz</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/top_tb/uut/Processor_1/BUS_DATA">
+      <obj_property name="ElementShortName">BUS_DATA[7:0]</obj_property>
+      <obj_property name="ObjectShortName">BUS_DATA[7:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/top_tb/uut/Processor_1/AluOut">
+      <obj_property name="ElementShortName">AluOut[7:0]</obj_property>
+      <obj_property name="ObjectShortName">AluOut[7:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/top_tb/uut/IR_LED">
+      <obj_property name="ElementShortName">IR_LED</obj_property>
+      <obj_property name="ObjectShortName">IR_LED</obj_property>
+   </wvobject>
+</wave_config>

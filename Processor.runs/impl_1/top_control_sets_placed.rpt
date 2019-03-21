@@ -1,0 +1,72 @@
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.2 (lin64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
+| Date         : Tue Mar 19 09:35:16 2019
+| Host         : tla03.see.ed.ac.uk running 64-bit Scientific Linux release 7.5 (Nitrogen)
+| Command      : report_control_sets -verbose -file top_control_sets_placed.rpt
+| Design       : top
+| Device       : xc7a35t
+-------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++-------------------------------------------------------------------+-------+
+|                               Status                              | Count |
++-------------------------------------------------------------------+-------+
+| Number of unique control sets                                     |    19 |
+| Minimum Number of register sites lost to control set restrictions |    54 |
++-------------------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              79 |           39 |
+| No           | No                    | Yes                    |               1 |            1 |
+| No           | Yes                   | No                     |              76 |           30 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             126 |           43 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++------------------------------------------------------------+-------------------------------------------------------+------------------------------------------------------------------+------------------+----------------+
+|                        Clock Signal                        |                     Enable Signal                     |                         Set/Reset Signal                         | Slice Load Count | Bel Load Count |
++------------------------------------------------------------+-------------------------------------------------------+------------------------------------------------------------------+------------------+----------------+
+|  IR_driver_1/CarSelector/Counter_36kHz/Trigger_out         |                                                       |                                                                  |                1 |              1 |
+|  IR_driver_1/CarSelector/FREQ_TRIGGER                      |                                                       | IR_driver_1/IRTransmitterSM/Counter_10Hz/ENABLE_reg              |                1 |              1 |
+|  IR_driver_1/CarSelector/Counter_37_5kHz/PULSE_37_5kHz_reg |                                                       |                                                                  |                1 |              1 |
+|  IR_driver_1/CarSelector/Counter_40kHz/PULSE_40kHz_reg     |                                                       |                                                                  |                1 |              1 |
+|  Processor_1/E[0]                                          |                                                       |                                                                  |                2 |              4 |
+|  CLK_IBUF_BUFG                                             | Processor_1/FSM_sequential_CurrState[4]_i_1_n_0       | RESET_IBUF                                                       |                4 |              5 |
+|  IR_driver_1/CarSelector/FREQ_TRIGGER                      |                                                       |                                                                  |                3 |              7 |
+|  CLK_IBUF_BUFG                                             | Processor_1/CurrRegA[7]_i_1_n_0                       | RESET_IBUF                                                       |                3 |              8 |
+|  CLK_IBUF_BUFG                                             | Processor_1/CurrRegB[7]_i_1_n_0                       | RESET_IBUF                                                       |                3 |              8 |
+|  CLK_IBUF_BUFG                                             | Processor_1/CurrProgCounter[7]_i_1_n_0                | RESET_IBUF                                                       |                4 |              8 |
+|  CLK_IBUF_BUFG                                             | Processor_1/CurrProgContext[7]_i_1_n_0                | RESET_IBUF                                                       |                4 |              8 |
+|  CLK_IBUF_BUFG                                             | Processor_1/CurrBusDataOutWE_i_1_n_0                  | RESET_IBUF                                                       |                2 |              8 |
+|  CLK_IBUF_BUFG                                             | Processor_1/InterruptRate_reg[7][0]                   | RESET_IBUF                                                       |                2 |              8 |
+|  IR_driver_1/CarSelector/FREQ_TRIGGER                      | IR_driver_1/IRTransmitterSM/Counter_10Hz/COUNT_reg[0] | IR_driver_1/IRTransmitterSM/Counter_10Hz/COUNT_reg[8]            |                3 |              9 |
+|  CLK_IBUF_BUFG                                             |                                                       | IR_driver_1/IRTransmitterSM/Counter_10Hz/count_value[23]_i_1_n_0 |                6 |             23 |
+|  CLK_IBUF_BUFG                                             | Timer_1/Timer[0]_i_2_n_0                              | Processor_1/Timer_reg[31]                                        |                8 |             32 |
+|  CLK_IBUF_BUFG                                             | Timer_1/TargetReached1                                | RESET_IBUF                                                       |               10 |             32 |
+|  CLK_IBUF_BUFG                                             |                                                       | RESET_IBUF                                                       |               24 |             53 |
+|  CLK_IBUF_BUFG                                             |                                                       |                                                                  |               31 |             65 |
++------------------------------------------------------------+-------------------------------------------------------+------------------------------------------------------------------+------------------+----------------+
+
+

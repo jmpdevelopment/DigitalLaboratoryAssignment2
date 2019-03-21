@@ -1,0 +1,17 @@
+#-----------------------------------------------------------
+# Vivado v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+# Start of session at: Tue Mar 19 12:01:04 2019
+# Process ID: 1095
+# Log file: /home/s1554371/Processor/vivado.log
+# Journal file: /home/s1554371/Processor/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/s1554371/Processor/Processor.xpr
+launch_simulation
+open_wave_config /home/s1554371/Processor/top_tb_behav.wcfg
+source top_tb.tcl
+restart
+run 1.2 s
+close_sim
